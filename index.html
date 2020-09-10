@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.calculator{
+		    width: 300px;
+		    margin: auto;
+		    margin-top: 100px;
+		    display: flex;
+		    flex-wrap: wrap;
+}
+		input{
+		    flex-basis: 100%;
+		    max-width: 100%;
+		    padding: 15px;
+		    box-sizing: border-box;
+		    color: #fff;
+		    background-color: #555;
+		    font-size: 30px;
+}
+		button{
+			font-size: 20px;
+			flex-basis: 60px;
+			max-width: 60px;
+			padding: 10px;
+			box-sizing: border-box;
+			color: #fff;
+			background-color: #555;
+		}
+		.equal{
+			flex-basis: 100%;
+			max-width:100%;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="calculator">
+		<input type="text" id="display" disabled><br>
+		<button onclick="one()">1</button>
+		<button onclick="two()">2</button>
+		<button onclick="three()">3</button>
+		<button onclick="four()">4</button>
+		<button onclick="five()">5</button>
+		<button onclick="six()">6</button>
+		<button onclick="seven()">7</button>
+		<button onclick="eight()">8</button>
+		<button onclick="nine()">9</button>
+		<button onclick="zero()">0</button>
+		<button onclick="add()">+</button>
+		<button onclick="sub()">-</button>
+		<button onclick="dev()">/</button>
+		<button onclick="mul()">x</button>
+		<button onclick="cnsl()">c</button>
+		<button onclick="equal()" class="equal">=</button>
+	</div>
+	
+ 	<script>
+
+ 		var Display = document.getElementById("display");
+
+ 		function one(){
+ 			Display.value += 1;
+ 		}
+ 		function two(){
+ 			Display.value += 2;
+ 		}
+ 		function three(){
+ 			Display.value += 3;
+ 		}
+ 		function four(){
+ 			Display.value += 4;
+ 		}
+ 		function five(){
+ 			Display.value += 5;
+ 		}
+ 		function six(){
+ 			Display.value += 6;
+ 		}
+ 		function seven(){
+ 			Display.value += 7;
+ 		}
+ 		function eight(){
+ 			Display.value += 8;
+ 		}
+ 		function nine(){
+ 			Display.value += 9;
+ 		}
+ 		function zero(){
+ 			Display.value += 0;
+ 		}
+ 		function add(){
+ 			Display.value += "+";
+ 		}
+ 		function sub(){
+ 			Display.value += "-";
+ 		}
+ 		function dev(){
+ 			Display.value += "/";
+ 		}
+ 		function mul(){
+ 			Display.value += "*";
+ 		}
+ 		function cnsl(){
+ 			Display.value = " ";
+ 		}
+ 		function equal(){
+ 			var calculate = eval(Display.value);
+ 			Display.value = calculate;
+ 		}
+
+ 	</script>
+
+</body>
+</html>
